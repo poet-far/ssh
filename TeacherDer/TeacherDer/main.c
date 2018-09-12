@@ -6,18 +6,20 @@
 int main()
 {
 	Teacher tea;
-	strcpy(tea.name, "Â··É");
+	strcpy(tea.name, "è·¯é£ž");
 	tea.age = 20;
 	tea.p = (char*)malloc(100);
-	strcpy(tea.p, "ÎÒÊÇÒª³ÉÎªº£ÔôÍõµÄÄÐÈË");
+	strcpy(tea.p, "æˆ‘æ˜¯è¦æˆä¸ºæµ·è´¼çŽ‹çš„ç”·äºº");
 	tea.plen = strlen(tea.p);
+	
+	printf("hello world\n");
 
-	// ±àÂë
+	// ç¼–ç 
 	char* outData;
 	int outlen;
 	encodeTeacher(&tea, &outData, &outlen);
 
-	// ½âÂë
+	// è§£ç 
 	Teacher* pt;
 	decodeTeacher(outData, outlen, &pt);
 	printf("name:	%s\n", pt->name);
